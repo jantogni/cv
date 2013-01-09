@@ -16,3 +16,6 @@ clean:
 distclean: clean
 	@rubber --clean --pdf $(TEXFILES:.tex=)
 	@rm -rf publish
+
+x:
+	@evince publish/$(PDFFILES)
