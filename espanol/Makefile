@@ -18,8 +18,7 @@ pdflatex: $(TEXFILES)
 	@if [ -d publish ];then mv *.pdf publish; else mkdir publish; mv *.pdf publish/;fi
 
 clean:
-	@rubber --clean $(TEXFILES:.tex=)
-	@rm -f *.out *.bbl *.bgl
+	@rm -f *.log *.bak *.aux *.bbl *.blg *.idx *.toc *.out *~
 
 distclean: clean
 	@rubber --clean --pdf $(TEXFILES:.tex=)
